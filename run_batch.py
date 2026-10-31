@@ -11,6 +11,8 @@ EXPERIMENTS = [
     ("guide_second_empty", 200000, ["--second"]),
     ("guide_first_target", 200000, ["--enemy"]),
     ("guide_second_target", 200000, ["--second", "--enemy"]),
+    ("combo_first_empty", 200000, ["--policy", "combo"]),
+    ("combo_second_empty", 200000, ["--policy", "combo", "--second"]),
     ("cheap_first_empty", 200000, ["--policy", "cheap"]),
     ("cheap_second_empty", 200000, ["--policy", "cheap", "--second"]),
     ("weighted_first_empty", 100000, ["--weighted"]),

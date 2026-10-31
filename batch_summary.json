@@ -11,8 +11,26 @@
     "natural_first_empty",
     "natural_second_empty",
     "depth3_second_empty",
-    "cheap_second_empty"
+    "cheap_second_empty",
+    "combo_first_empty",
+    "combo_second_empty"
   ],
-  "games": 1900000,
-  "elapsed_seconds": 364.63340950012207
+  "games": 2300000,
+  "elapsed_seconds": 364.63340950012207,
+  "elapsed_seconds_scope": "Original 12-experiment batch; additional runs are recorded separately.",
+  "additional_runs": [
+    {
+      "experiments": [
+        "combo_first_empty",
+        "combo_second_empty"
+      ],
+      "games": 400000,
+      "seed": 20261031,
+      "policy": "combo",
+      "seconds_by_experiment": {
+        "combo_first_empty": 87.77042010007426,
+        "combo_second_empty": 133.1737938001752
+      }
+    }
+  ]
 }

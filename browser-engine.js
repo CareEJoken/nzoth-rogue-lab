@@ -276,7 +276,9 @@ const NzothEngine = (() => {
     let deck=[];for(let k=0;k<20;k++)for(let j=0;j<COPIES[k];j++)deck.push(card(100+k*3+j,k,0,k===SHADOW));rng.shuffle(deck);
     const n=second?4:3,opening=deck.slice(0,n);deck=deck.slice(n);
     let keep=new Set([...minions,DIG,SWINDLE,SHROUD]);
-    if(policy==='cheap'){
+    if(policy==='combo'){
+      if(opening.some(c=>[SWINDLE,SHROUD].includes(c.kind)))keep.add(PREP);
+    }else if(policy==='cheap'){
       keep=new Set([...minions,DIG,SHROUD]);if(opening.some(c=>[DIG,SHROUD,SWINDLE,MAP].includes(c.kind)))keep.add(PREP);if(opening.some(c=>c.kind===ICE))keep.add(STEP);
     }
     const held=opening.filter(c=>keep.has(c.kind)),rejected=opening.filter(c=>!keep.has(c.kind)),replacement=deck.slice(0,rejected.length);

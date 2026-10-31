@@ -13,7 +13,7 @@
 <main class="shell">
   <header class="mast">
     <div><div class="eyebrow">WILD / THREE-MINION ROGUE</div><h1>恩佐斯启动实验室</h1><p class="subtitle">逐步看一局如何启动，再与 200,000 次模拟对照。</p></div>
-    <div class="mast-right"><label class="field-label" for="preset">实验口径 · 同时作用于单局与图表</label><select id="preset"><option value="guide">攻略留牌 / 对手空场</option><option value="target">攻略留牌 / 对手提供骨刺目标</option><option value="cheap">偏加速留牌 / 对手空场</option><option value="natural">禁用主动过牌 / 对手空场</option></select></div>
+    <div class="mast-right"><label class="field-label" for="preset">实验口径 · 同时作用于单局与图表</label><select id="preset"><option value="guide">攻略留牌 / 对手空场</option><option value="combo">待发组合留牌 / 对手空场</option><option value="target">攻略留牌 / 对手提供骨刺目标</option><option value="cheap">偏加速留牌 / 对手空场</option><option value="natural">禁用主动过牌 / 对手空场</option></select></div>
   </header>
   <div class="badge-line"><span>30 张牌 · 3 个随从</span><span>金鱼模型 / 不计对手干扰</span><span>PYTHON 随机流一致</span><span>离线运行 · 无外部依赖</span></div>
   <div class="workspace">
@@ -52,7 +52,7 @@
       <details class="model-notes"><summary>完整 30 张牌表</summary><div id="deck-full" class="deck-list"></div></details>
     </section>
   </div>
-  <footer class="bottom"><span>浏览器与 Python：1,232 组种子与口径回放一致性校验通过</span><span>卡牌 / 牌表快照：2026-10-31 · 数据与规则已嵌入本页</span></footer>
+  <footer class="bottom"><span>浏览器与 Python：1,540 组种子与口径回放一致性校验通过</span><span>卡牌 / 牌表快照：2026-10-31 · 数据与规则已嵌入本页</span></footer>
 </main>
 <dialog id="card-dialog" aria-labelledby="dialog-title"><button id="dialog-close" class="btn quiet close" type="button">关闭</button><div id="dialog-cost" class="rule-cost"></div><h2 id="dialog-title"></h2><p id="dialog-text"></p><p id="dialog-note" class="hint"></p></dialog>
 <script>
@@ -69,7 +69,7 @@ if(STATS===null||CARD_DATA===null||typeof NzothEngine==='undefined'){
 }
 const $=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pct=n=>(n*100).toFixed(2)+'%',number=n=>n.toLocaleString('en-US');
-const PRESETS={guide:{label:'攻略留牌 · 对手空场',prefix:'guide',suffix:'empty'},target:{label:'攻略留牌 · 骨刺目标',prefix:'guide',suffix:'target'},cheap:{label:'偏加速留牌 · 对手空场',prefix:'cheap',suffix:'empty'},natural:{label:'禁用主动过牌 · 对手空场',prefix:'natural',suffix:'empty'}};
+const PRESETS={guide:{label:'攻略留牌 · 对手空场',prefix:'guide',suffix:'empty'},combo:{label:'待发组合留牌 · 对手空场',prefix:'combo',suffix:'empty'},target:{label:'攻略留牌 · 骨刺目标',prefix:'guide',suffix:'target'},cheap:{label:'偏加速留牌 · 对手空场',prefix:'cheap',suffix:'empty'},natural:{label:'禁用主动过牌 · 对手空场',prefix:'natural',suffix:'empty'}};
 let side='first',preset='guide',replay=null,index=0,timer=null;
 function getStats(){const p=PRESETS[preset];return [STATS[p.prefix+'_first_'+p.suffix],STATS[p.prefix+'_second_'+p.suffix]];}
 function pause(){if(timer!==null)clearInterval(timer);timer=null;$('play').textContent='自动播放';$('play').setAttribute('aria-pressed','false');}
@@ -77,7 +77,7 @@ function generate(){
   pause();$('error').textContent='';const input=$('seed').value.trim();
   if(!/^-?\d{1,59}$/.test(input)){$('error').textContent='请输入整数种子，例如 20261031；支持负整数。原回放未更新。';return false;}
   try{
-    replay=NzothEngine.simulate(input,{second:side==='second',enemy:preset==='target',policy:preset==='cheap'?'cheap':'guide',naturalOnly:preset==='natural'});index=0;
+    replay=NzothEngine.simulate(input,{second:side==='second',enemy:preset==='target',policy:['cheap','combo'].includes(preset)?preset:'guide',naturalOnly:preset==='natural'});index=0;
     $('scrubber').max=replay.events.length-1;
     $('timeline').innerHTML=replay.events.map((e,i)=>`<li><button type="button" data-step="${i}"><span class="step-no">${String(i+1).padStart(2,'0')}</span><span class="${['natural','success','failure','mulligan'].includes(e.type)?'milestone':''}">${esc(e.title)}</span><span class="fee">${e.paid!==undefined?e.paid+' 费':''}</span></button></li>`).join('');
     $('turn-jumps').innerHTML=[0,1,2,3,4,5].map(t=>`<button type="button" data-turn="${t}" ${replay.events.some(e=>e.state.turn===t)?'':'disabled'}>${t?t+' 费':'起手'}</button>`).join('');
@@ -107,7 +107,7 @@ function render(){
 }
 function notes(){
   const common=['先手起手 3 张，后手 4 张；换牌后再得到幸运币。被换掉的实体不参与替换抽牌。','启动 = 合法触发幻术师亡语，手中的随从池只剩恩佐斯。不把仅抽齐组件算成功。','行骗先抽法术，连击才抽随从；潜伏帷幕抽两个随从；挖掘宝藏抽一个随从。','探底看底部 3 张，没连击不立即抽；地图从牌库发现最多 3 个不同选项，打出首选牌才有第二次选择。','交易不触发连击，先抽牌再插回弯刀，并随机减一个手中法术 1 费；矿锄通过英雄攻击抽牌。','出牌前先搜索可立即启动的路线，否则用与 Python 相同的经验评分决策；不能偷看未知牌库顺序。','对手不干扰、不斩杀、不移除我方碎冰者，英雄可以正常攻击；启动前不使用偷牌、变异鱼和阴谋。','统计的置信区间只覆盖抽样误差，不覆盖策略或规则假设误差。本程序不是最优操作上限证明。'];
-  const specific={guide:'留牌：保留三个随从、挖掘宝藏、行骗、潜伏帷幕（含重复牌）。',target:'留牌同攻略；从第二回合起，每回合对手提供一个骨刺能直接击杀的目标。空场模型仍可以骨刺击杀自己的碎冰者。',cheap:'留牌：保留三个随从、挖掘宝藏、潜伏帷幕；原始起手有检索牌时保留待发，有碎冰者时保留暗影步，不无条件保留行骗。',natural:'留牌仍采用攻略方案，但禁用所有主动过牌，只自然抽牌并准备、执行启动组合技。'};
+  const specific={guide:'留牌：保留三个随从、挖掘宝藏、行骗、潜伏帷幕（含重复牌）。',combo:'留牌同攻略；原始起手同时有伺机待发和行骗或潜伏帷幕时，额外保留伺机待发，组合两边都留（含重复牌）。只有待发，或只有待发 + 挖掘宝藏/异教地图，不额外保留待发；不根据替换抽到的牌重新判断。',target:'留牌同攻略；从第二回合起，每回合对手提供一个骨刺能直接击杀的目标。空场模型仍可以骨刺击杀自己的碎冰者。',cheap:'留牌：保留三个随从、挖掘宝藏、潜伏帷幕；原始起手有检索牌时保留待发，有碎冰者时保留暗影步，不无条件保留行骗。',natural:'留牌仍采用攻略方案，但禁用所有主动过牌，只自然抽牌并准备、执行启动组合技。'};
   $('model-notes').innerHTML=[specific[preset],...common].map(n=>'<li>'+esc(n)+'</li>').join('');
 }
 const NS='http://www.w3.org/2000/svg';

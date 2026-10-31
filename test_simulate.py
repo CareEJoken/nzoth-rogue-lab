@@ -25,6 +25,24 @@ def execute_win(s):
     raise AssertionError("tactical loop")
 
 
+class OpeningRandom(random.Random):
+    """Force an opening hand while keeping replacement draws reproducible."""
+
+    def __init__(self, kinds):
+        super().__init__(1)
+        self.kinds = kinds
+        self.first_shuffle = True
+
+    def shuffle(self, deck):
+        if not self.first_shuffle:
+            return super().shuffle(deck)
+        self.first_shuffle = False
+        selected = []
+        for kind in self.kinds:
+            selected.append(deck.pop(next(i for i, c in enumerate(deck) if c.kind == kind)))
+        deck[:0] = selected
+
+
 class EngineTests(unittest.TestCase):
     def test_deck_code(self):
         heroes, cards = decode_deck(DECK_CODE)
@@ -229,6 +247,48 @@ class EngineTests(unittest.TestCase):
         for seed in range(1000):
             s, _, rejected = mulligan(random.Random(seed), seed % 2 == 0, "guide")
             self.assertFalse({c.uid for c in rejected} & {c.uid for c in s.hand})
+
+    def test_combo_keeps_prep_swindle_pair(self):
+        s, opening, rejected = mulligan(OpeningRandom([PREP, SWINDLE, STEP]), False, "combo")
+        self.assertEqual([c.kind for c in rejected], [STEP])
+        self.assertTrue({c.uid for c in opening[:2]} <= {c.uid for c in s.hand})
+
+    def test_combo_keeps_prep_shroud_pair(self):
+        s, opening, rejected = mulligan(OpeningRandom([PREP, SHROUD, EVASION]), False, "combo")
+        self.assertEqual([c.kind for c in rejected], [EVASION])
+        self.assertTrue({c.uid for c in opening[:2]} <= {c.uid for c in s.hand})
+
+    def test_combo_keeps_duplicate_prep_and_draw_cards(self):
+        for kinds in ([PREP, PREP, SWINDLE, SHROUD], [PREP, SWINDLE, SWINDLE, SHROUD]):
+            s, opening, rejected = mulligan(OpeningRandom(kinds), True, "combo")
+            self.assertEqual(rejected, [])
+            self.assertEqual(s.hand[:-1], opening)
+
+    def test_combo_does_not_keep_lone_prep_or_other_draw_pair(self):
+        for kinds in ([PREP, STEP, EVASION], [PREP, DIG, STEP], [PREP, MAP, STEP]):
+            _, _, rejected = mulligan(OpeningRandom(kinds), False, "combo")
+            self.assertIn(PREP, [c.kind for c in rejected])
+
+    def test_combo_still_keeps_baseline_cards_without_prep(self):
+        for kinds in ([ICE, KOBOLD, NZOTH], [DIG, SWINDLE, SHROUD]):
+            _, _, rejected = mulligan(OpeningRandom(kinds), False, "combo")
+            self.assertEqual(rejected, [])
+
+    def test_guide_still_rejects_prep_in_pair(self):
+        for draw_kind in (SWINDLE, SHROUD):
+            _, _, rejected = mulligan(OpeningRandom([PREP, draw_kind, STEP]), False, "guide")
+            self.assertEqual([c.kind for c in rejected], [PREP, STEP])
+
+    def test_combo_condition_only_uses_original_opening(self):
+        # Replacement cards cannot retroactively make a rejected Prep worth keeping.
+        for second in (False, True):
+            for seed in range(300):
+                s, opening, rejected = mulligan(random.Random(seed), second, "combo")
+                should_keep = any(c.kind in (SWINDLE, SHROUD) for c in opening)
+                for c in opening:
+                    if c.kind == PREP:
+                        self.assertEqual(c not in rejected, should_keep)
+                self.assertFalse({c.uid for c in rejected} & {c.uid for c in s.hand})
 
     def test_smoke_and_trace_replay(self):
         for seed in range(200):

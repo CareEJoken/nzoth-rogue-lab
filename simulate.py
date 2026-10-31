@@ -614,7 +614,10 @@ def mulligan(rng, second, policy):
     n = 4 if second else 3
     opening, deck = deck[:n], deck[n:]
     keep = MINIONS | {DIG, SWINDLE, SHROUD}
-    if policy == "cheap":
+    if policy == "combo":
+        if any(c.kind in (SWINDLE, SHROUD) for c in opening):
+            keep |= {PREP}
+    elif policy == "cheap":
         keep = MINIONS | {DIG, SHROUD}
         if any(c.kind in (DIG, SHROUD, SWINDLE, MAP) for c in opening):
             keep |= {PREP}
@@ -719,7 +722,7 @@ def main():
     parser.add_argument("--seed", type=int, default=20261031)
     parser.add_argument("--second", action="store_true")
     parser.add_argument("--enemy", action="store_true")
-    parser.add_argument("--policy", choices=("guide", "cheap"), default="guide")
+    parser.add_argument("--policy", choices=("guide", "cheap", "combo"), default="guide")
     parser.add_argument("--weighted", action="store_true")
     parser.add_argument("--depth", type=int, default=2)
     parser.add_argument("--natural-only", action="store_true")

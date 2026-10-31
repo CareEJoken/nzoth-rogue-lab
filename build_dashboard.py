@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parent
 EXPERIMENTS = [
     "guide_first_empty", "guide_second_empty", "guide_first_target", "guide_second_target",
     "cheap_first_empty", "cheap_second_empty", "natural_first_empty", "natural_second_empty",
+    "combo_first_empty", "combo_second_empty",
 ]
 
 

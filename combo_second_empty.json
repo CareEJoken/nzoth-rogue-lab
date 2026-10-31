@@ -1,0 +1,1080 @@
+{
+  "n": 200000,
+  "seed": 20261031,
+  "second": true,
+  "enemy_target": false,
+  "mulligan": "combo",
+  "discover_weighted": false,
+  "prefix_depth": 2,
+  "ablation": null,
+  "seconds": 133.1737938001752,
+  "failed": 3950,
+  "burn_games": 390,
+  "rows": [
+    {
+      "turn": 1,
+      "first_count": 0,
+      "first": 0.0,
+      "first_ci95": [
+        0.0,
+        1.9206925190408615e-05
+      ],
+      "cumulative_count": 0,
+      "cumulative": 0.0,
+      "cumulative_ci95": [
+        0.0,
+        1.9206925190408615e-05
+      ]
+    },
+    {
+      "turn": 2,
+      "first_count": 5389,
+      "first": 0.026945,
+      "first_ci95": [
+        0.026244390017241714,
+        0.02766378184675019
+      ],
+      "cumulative_count": 5389,
+      "cumulative": 0.026945,
+      "cumulative_ci95": [
+        0.026244390017241714,
+        0.02766378184675019
+      ]
+    },
+    {
+      "turn": 3,
+      "first_count": 70448,
+      "first": 0.35224,
+      "first_ci95": [
+        0.35014942113938863,
+        0.3543362548911436
+      ],
+      "cumulative_count": 75837,
+      "cumulative": 0.379185,
+      "cumulative_ci95": [
+        0.3770609650752345,
+        0.3813136758940992
+      ]
+    },
+    {
+      "turn": 4,
+      "first_count": 107747,
+      "first": 0.538735,
+      "first_ci95": [
+        0.5365495560915631,
+        0.5409189559479423
+      ],
+      "cumulative_count": 183584,
+      "cumulative": 0.91792,
+      "cumulative_ci95": [
+        0.9167089895137064,
+        0.9191149565699424
+      ]
+    },
+    {
+      "turn": 5,
+      "first_count": 12466,
+      "first": 0.06233,
+      "first_ci95": [
+        0.06127886920099241,
+        0.06339794338890377
+      ],
+      "cumulative_count": 196050,
+      "cumulative": 0.98025,
+      "cumulative_ci95": [
+        0.9796309152706368,
+        0.9808506364777176
+      ]
+    }
+  ],
+  "examples": {
+    "3": [
+      {
+        "event": "mulligan",
+        "opening": [
+          "潜伏帷幕",
+          "挖掘宝藏",
+          "碎冰蹒跚者",
+          "闪避"
+        ],
+        "rejected": [
+          "闪避"
+        ],
+        "kept_and_replaced": [
+          "潜伏帷幕",
+          "挖掘宝藏",
+          "碎冰蹒跚者",
+          "伪造的幸运币",
+          "伪造的幸运币"
+        ]
+      },
+      {
+        "turn": 1,
+        "event": "natural_draw",
+        "card": "殒命暗影"
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "伪造的幸运币",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 1,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 2,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "伪造的幸运币",
+        "shadow": true,
+        "paid": 0,
+        "mana_after_payment": 2,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 3,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "伪造的幸运币",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 3,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 4,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "碎冰蹒跚者",
+        "shadow": false,
+        "paid": 1,
+        "mana_after_payment": 3,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 3,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "潜伏帷幕",
+        "shadow": false,
+        "paid": 3,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 1,
+        "event": "end",
+        "mana": 0,
+        "hand": [
+          "挖掘宝藏",
+          "恩佐斯，梦境之末",
+          "狗头人幻术师"
+        ],
+        "ice_discount": 1
+      },
+      {
+        "turn": 2,
+        "event": "natural_draw",
+        "card": "暗影步"
+      },
+      {
+        "turn": 2,
+        "event": "play",
+        "card": "暗影步",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 2,
+        "combo_before": false,
+        "target": "ice",
+        "mana_after_resolution": 2,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 2,
+        "event": "play",
+        "card": "碎冰蹒跚者",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 2,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 2,
+        "ice_discount_after": 2
+      },
+      {
+        "turn": 2,
+        "event": "end",
+        "mana": 2,
+        "hand": [
+          "挖掘宝藏",
+          "恩佐斯，梦境之末",
+          "狗头人幻术师"
+        ],
+        "ice_discount": 2
+      },
+      {
+        "turn": 3,
+        "event": "natural_draw",
+        "card": "伺机待发"
+      },
+      {
+        "turn": 3,
+        "event": "play",
+        "card": "狗头人幻术师",
+        "shadow": false,
+        "paid": 3,
+        "mana_after_payment": 0,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 0
+      }
+    ],
+    "4": [
+      {
+        "event": "mulligan",
+        "opening": [
+          "似曾相识",
+          "锯齿骨刺",
+          "美味变异鱼",
+          "垂钓时光"
+        ],
+        "rejected": [
+          "似曾相识",
+          "锯齿骨刺",
+          "美味变异鱼",
+          "垂钓时光"
+        ],
+        "kept_and_replaced": [
+          "挖掘宝藏",
+          "恩佐斯，梦境之末",
+          "闪避",
+          "伺机待发",
+          "伪造的幸运币"
+        ]
+      },
+      {
+        "turn": 1,
+        "event": "natural_draw",
+        "card": "梦魇供能"
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "伺机待发",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 1,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 1,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "挖掘宝藏",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 1,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 1,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 1,
+        "event": "end",
+        "mana": 1,
+        "hand": [
+          "恩佐斯，梦境之末",
+          "闪避",
+          "伪造的幸运币",
+          "梦魇供能",
+          "狗头人幻术师"
+        ],
+        "ice_discount": 0
+      },
+      {
+        "turn": 2,
+        "event": "natural_draw",
+        "card": "潜伏帷幕"
+      },
+      {
+        "turn": 2,
+        "event": "play",
+        "card": "伪造的幸运币",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 2,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 3,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 2,
+        "event": "play",
+        "card": "潜伏帷幕",
+        "shadow": false,
+        "paid": 3,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 2,
+        "event": "end",
+        "mana": 0,
+        "hand": [
+          "恩佐斯，梦境之末",
+          "闪避",
+          "梦魇供能",
+          "狗头人幻术师",
+          "碎冰蹒跚者"
+        ],
+        "ice_discount": 0
+      },
+      {
+        "turn": 3,
+        "event": "natural_draw",
+        "card": "行骗"
+      },
+      {
+        "turn": 3,
+        "event": "play",
+        "card": "碎冰蹒跚者",
+        "shadow": false,
+        "paid": 1,
+        "mana_after_payment": 2,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 2,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 3,
+        "event": "play",
+        "card": "行骗",
+        "shadow": false,
+        "paid": 2,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 3,
+        "event": "play",
+        "card": "暗影步",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "ice",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 3,
+        "event": "play",
+        "card": "碎冰蹒跚者",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 2
+      },
+      {
+        "turn": 3,
+        "event": "end",
+        "mana": 0,
+        "hand": [
+          "恩佐斯，梦境之末",
+          "闪避",
+          "梦魇供能",
+          "狗头人幻术师"
+        ],
+        "ice_discount": 2
+      },
+      {
+        "turn": 4,
+        "event": "natural_draw",
+        "card": "潜伏帷幕"
+      },
+      {
+        "turn": 4,
+        "event": "play",
+        "card": "狗头人幻术师",
+        "shadow": false,
+        "paid": 3,
+        "mana_after_payment": 1,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 1,
+        "ice_discount_after": 0
+      }
+    ],
+    "5": [
+      {
+        "event": "mulligan",
+        "opening": [
+          "黑水弯刀",
+          "异教地图",
+          "闪避",
+          "闪避"
+        ],
+        "rejected": [
+          "黑水弯刀",
+          "异教地图",
+          "闪避",
+          "闪避"
+        ],
+        "kept_and_replaced": [
+          "美味变异鱼",
+          "挖掘宝藏",
+          "黑水弯刀",
+          "似曾相识",
+          "伪造的幸运币"
+        ]
+      },
+      {
+        "turn": 1,
+        "event": "natural_draw",
+        "card": "垂钓时光"
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "挖掘宝藏",
+        "shadow": false,
+        "paid": 1,
+        "mana_after_payment": 0,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "伪造的幸运币",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 1,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "垂钓时光",
+        "shadow": false,
+        "paid": 1,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 1,
+        "event": "dredge",
+        "options": [
+          "闪避",
+          "恩佐斯，梦境之末",
+          "伪造的幸运币"
+        ],
+        "chosen": "恩佐斯，梦境之末"
+      },
+      {
+        "turn": 1,
+        "event": "end",
+        "mana": 0,
+        "hand": [
+          "美味变异鱼",
+          "黑水弯刀",
+          "似曾相识",
+          "碎冰蹒跚者",
+          "恩佐斯，梦境之末"
+        ],
+        "ice_discount": 0
+      },
+      {
+        "turn": 2,
+        "event": "natural_draw",
+        "card": "梦魇供能"
+      },
+      {
+        "turn": 2,
+        "event": "play",
+        "card": "碎冰蹒跚者",
+        "shadow": false,
+        "paid": 1,
+        "mana_after_payment": 1,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 1,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 2,
+        "event": "trade",
+        "draw": "殒命暗影",
+        "mana": 0
+      },
+      {
+        "turn": 2,
+        "event": "end",
+        "mana": 0,
+        "hand": [
+          "美味变异鱼",
+          "似曾相识",
+          "恩佐斯，梦境之末",
+          "梦魇供能",
+          "殒命暗影"
+        ],
+        "ice_discount": 1
+      },
+      {
+        "turn": 3,
+        "event": "natural_draw",
+        "card": "伺机待发"
+      },
+      {
+        "turn": 3,
+        "event": "end",
+        "mana": 3,
+        "hand": [
+          "美味变异鱼",
+          "似曾相识",
+          "恩佐斯，梦境之末",
+          "梦魇供能",
+          "殒命暗影",
+          "伺机待发"
+        ],
+        "ice_discount": 1
+      },
+      {
+        "turn": 4,
+        "event": "natural_draw",
+        "card": "潜伏帷幕"
+      },
+      {
+        "turn": 4,
+        "event": "play",
+        "card": "伺机待发",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 4,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 4,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 4,
+        "event": "play",
+        "card": "潜伏帷幕",
+        "shadow": false,
+        "paid": 1,
+        "mana_after_payment": 3,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 3,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 4,
+        "event": "end",
+        "mana": 3,
+        "hand": [
+          "美味变异鱼",
+          "似曾相识",
+          "恩佐斯，梦境之末",
+          "梦魇供能",
+          "潜伏帷幕",
+          "狗头人幻术师"
+        ],
+        "ice_discount": 1
+      },
+      {
+        "turn": 5,
+        "event": "natural_draw",
+        "card": "伺机待发"
+      },
+      {
+        "turn": 5,
+        "event": "play",
+        "card": "狗头人幻术师",
+        "shadow": false,
+        "paid": 4,
+        "mana_after_payment": 1,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 1,
+        "ice_discount_after": 0
+      }
+    ],
+    "2": [
+      {
+        "event": "mulligan",
+        "opening": [
+          "异教地图",
+          "伺机待发",
+          "闪避",
+          "行骗"
+        ],
+        "rejected": [
+          "异教地图",
+          "闪避"
+        ],
+        "kept_and_replaced": [
+          "伺机待发",
+          "行骗",
+          "碎冰蹒跚者",
+          "伪造的幸运币",
+          "伪造的幸运币"
+        ]
+      },
+      {
+        "turn": 1,
+        "event": "natural_draw",
+        "card": "垂钓时光"
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "碎冰蹒跚者",
+        "shadow": false,
+        "paid": 1,
+        "mana_after_payment": 0,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "伺机待发",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "行骗",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "伪造的幸运币",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 1,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "挖掘宝藏",
+        "shadow": false,
+        "paid": 1,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "伪造的幸运币",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 1,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "垂钓时光",
+        "shadow": false,
+        "paid": 1,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 1,
+        "event": "dredge",
+        "options": [
+          "暗影步",
+          "潜伏帷幕",
+          "暗影步"
+        ],
+        "chosen": "暗影步"
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "暗影步",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "ice",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "碎冰蹒跚者",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 2
+      },
+      {
+        "turn": 1,
+        "event": "end",
+        "mana": 0,
+        "hand": [
+          "狗头人幻术师",
+          "恩佐斯，梦境之末"
+        ],
+        "ice_discount": 2
+      },
+      {
+        "turn": 2,
+        "event": "natural_draw",
+        "card": "伪造的幸运币"
+      },
+      {
+        "turn": 2,
+        "event": "play",
+        "card": "伪造的幸运币",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 2,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 3,
+        "ice_discount_after": 2
+      },
+      {
+        "turn": 2,
+        "event": "play",
+        "card": "狗头人幻术师",
+        "shadow": false,
+        "paid": 3,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 0
+      }
+    ],
+    "0": [
+      {
+        "event": "mulligan",
+        "opening": [
+          "伺机待发",
+          "黑水弯刀",
+          "暗影步",
+          "伺机待发"
+        ],
+        "rejected": [
+          "伺机待发",
+          "黑水弯刀",
+          "暗影步",
+          "伺机待发"
+        ],
+        "kept_and_replaced": [
+          "闪避",
+          "黑水弯刀",
+          "殒命暗影",
+          "潜伏帷幕",
+          "伪造的幸运币"
+        ]
+      },
+      {
+        "turn": 1,
+        "event": "natural_draw",
+        "card": "锯齿骨刺"
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "伪造的幸运币",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 1,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 2,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "伪造的幸运币",
+        "shadow": true,
+        "paid": 0,
+        "mana_after_payment": 2,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 3,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 1,
+        "event": "play",
+        "card": "潜伏帷幕",
+        "shadow": false,
+        "paid": 3,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 0
+      },
+      {
+        "turn": 1,
+        "event": "end",
+        "mana": 0,
+        "hand": [
+          "闪避",
+          "黑水弯刀",
+          "锯齿骨刺",
+          "碎冰蹒跚者",
+          "狗头人幻术师"
+        ],
+        "ice_discount": 0
+      },
+      {
+        "turn": 2,
+        "event": "natural_draw",
+        "card": "伺机待发"
+      },
+      {
+        "turn": 2,
+        "event": "play",
+        "card": "碎冰蹒跚者",
+        "shadow": false,
+        "paid": 1,
+        "mana_after_payment": 1,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 1,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 2,
+        "event": "trade",
+        "draw": "异教地图",
+        "mana": 0
+      },
+      {
+        "turn": 2,
+        "event": "play",
+        "card": "伺机待发",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 2,
+        "event": "play",
+        "card": "异教地图",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 0,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 0,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 2,
+        "event": "discover",
+        "options": [
+          "异教地图",
+          "黑水弯刀",
+          "似曾相识"
+        ],
+        "chosen": "黑水弯刀"
+      },
+      {
+        "turn": 2,
+        "event": "end",
+        "mana": 0,
+        "hand": [
+          "闪避",
+          "锯齿骨刺",
+          "狗头人幻术师",
+          "黑水弯刀"
+        ],
+        "ice_discount": 1
+      },
+      {
+        "turn": 3,
+        "event": "natural_draw",
+        "card": "伪造的幸运币"
+      },
+      {
+        "turn": 3,
+        "event": "trade",
+        "draw": "闪避",
+        "mana": 2
+      },
+      {
+        "turn": 3,
+        "event": "end",
+        "mana": 2,
+        "hand": [
+          "闪避",
+          "锯齿骨刺",
+          "狗头人幻术师",
+          "伪造的幸运币",
+          "闪避"
+        ],
+        "ice_discount": 1
+      },
+      {
+        "turn": 4,
+        "event": "natural_draw",
+        "card": "疾速矿锄"
+      },
+      {
+        "turn": 4,
+        "event": "play",
+        "card": "疾速矿锄",
+        "shadow": false,
+        "paid": 2,
+        "mana_after_payment": 2,
+        "combo_before": false,
+        "target": "",
+        "mana_after_resolution": 2,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 4,
+        "event": "attack",
+        "mana": 2
+      },
+      {
+        "turn": 4,
+        "event": "end",
+        "mana": 2,
+        "hand": [
+          "闪避",
+          "锯齿骨刺",
+          "狗头人幻术师",
+          "伪造的幸运币",
+          "闪避",
+          "伺机待发"
+        ],
+        "ice_discount": 1
+      },
+      {
+        "turn": 5,
+        "event": "natural_draw",
+        "card": "暗影步"
+      },
+      {
+        "turn": 5,
+        "event": "attack",
+        "mana": 5
+      },
+      {
+        "turn": 5,
+        "event": "play",
+        "card": "暗影步",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 5,
+        "combo_before": false,
+        "target": "ice",
+        "mana_after_resolution": 5,
+        "ice_discount_after": 1
+      },
+      {
+        "turn": 5,
+        "event": "play",
+        "card": "碎冰蹒跚者",
+        "shadow": false,
+        "paid": 0,
+        "mana_after_payment": 5,
+        "combo_before": true,
+        "target": "",
+        "mana_after_resolution": 5,
+        "ice_discount_after": 2
+      },
+      {
+        "turn": 5,
+        "event": "end",
+        "mana": 5,
+        "hand": [
+          "闪避",
+          "锯齿骨刺",
+          "狗头人幻术师",
+          "伪造的幸运币",
+          "闪避",
+          "伺机待发",
+          "伪造的幸运币"
+        ],
+        "ice_discount": 2
+      }
+    ]
+  },
+  "tactical_cache": "CacheInfo(hits=2257769, misses=37664, maxsize=180000, currsize=37664)"
+}
