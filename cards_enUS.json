@@ -1,0 +1,364 @@
+[
+  {
+    "artist": "Alex Horley Orlandelli",
+    "attack": 3,
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 5,
+    "dbfId": 45936,
+    "faction": "ALLIANCE",
+    "flavor": "He can make ANYTHING look like a candle.",
+    "health": 3,
+    "id": "LOOT_412",
+    "mechanics": [
+      "DEATHRATTLE"
+    ],
+    "name": "Kobold Illusionist",
+    "rarity": "RARE",
+    "set": "LOOTAPALOOZA",
+    "text": "<b>Deathrattle:</b> Summon a 1/1 copy of a minion from your hand.",
+    "type": "MINION"
+  },
+  {
+    "artist": "Konstantin Turovec",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 51375,
+    "flavor": "\"Many minions equals many treasures for king. Kobold arithmetic!\"",
+    "id": "DAL_010",
+    "name": "Togwaggle's Scheme",
+    "rarity": "RARE",
+    "set": "DALARAN",
+    "text": "Choose a minion. Shuffle 1 copy of it into your deck.\n<i>(Upgrades each turn!)</i>",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Grace Liu",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 63359,
+    "flavor": "\"Savory\" is a creative way to put it.",
+    "id": "WC_017",
+    "isMiniSet": true,
+    "name": "Savory Deviate Delight",
+    "rarity": "RARE",
+    "referencedTags": [
+      "STEALTH"
+    ],
+    "set": "THE_BARRENS",
+    "text": "[x]Transform a minion in\nboth players' hands into a\nPirate or <b>Stealth</b> minion.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Mauricio Herrera",
+    "attack": 1,
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 76259,
+    "faction": "HORDE",
+    "flavor": "Someone didn’t realize the ‘cold, black heart’ thing was supposed to be a metaphor.",
+    "health": 3,
+    "id": "TID_078",
+    "isMiniSet": true,
+    "mechanics": [
+      "BATTLECRY"
+    ],
+    "name": "Shattershambler",
+    "race": "ELEMENTAL",
+    "races": [
+      "ELEMENTAL"
+    ],
+    "rarity": "RARE",
+    "referencedTags": [
+      "DEATHRATTLE"
+    ],
+    "set": "THE_SUNKEN_CITY",
+    "text": "[x]<b>Battlecry:</b> Your next\n<b>Deathrattle</b> minion costs (1) \n less, but immediately\ndies when played.",
+    "type": "MINION"
+  },
+  {
+    "artist": "Alex Stone",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 2,
+    "dbfId": 77557,
+    "flavor": "Draka, in an attempt to help, threw them a bone.",
+    "id": "REV_939",
+    "name": "Serrated Bone Spike",
+    "rarity": "RARE",
+    "set": "REVENDRETH",
+    "text": "[x]Deal $3 damage to a \nminion. If it dies, your \nnext card this turn \ncosts (2) less.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Anton Zemskov",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 0,
+    "dbfId": 86092,
+    "elite": true,
+    "flavor": "Each time you cast a spell, transform this into a copy of its flavor text.",
+    "hideStats": true,
+    "id": "RLK_567",
+    "name": "Shadow of Demise",
+    "rarity": "LEGENDARY",
+    "set": "RETURN_OF_THE_LICH_KING",
+    "spellSchool": "SHADOW",
+    "text": "Each time you cast a spell, transform this into a copy of it.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Tanamaes Leejierasaes",
+    "attack": 1,
+    "cardClass": "ROGUE",
+    "classes": [
+      "ROGUE",
+      "DEMONHUNTER"
+    ],
+    "collectible": true,
+    "cost": 2,
+    "dbfId": 102254,
+    "durability": 0,
+    "flavor": "QUICK! Pick which quick pick trick will stick in the thick of the wick! Lickety split!",
+    "health": 2,
+    "id": "DEEP_014",
+    "isMiniSet": true,
+    "mechanics": [
+      "TRIGGER_VISUAL"
+    ],
+    "name": "Quick Pick",
+    "rarity": "COMMON",
+    "set": "WILD_WEST",
+    "text": "After your hero attacks, draw a card.",
+    "type": "WEAPON"
+  },
+  {
+    "artist": "Ivan Fomin",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 115088,
+    "flavor": "Every instance of \"but not less than (1)\" has been replaced with \"but not more than (1).\"",
+    "id": "EDR_528",
+    "mechanics": [
+      "COMBO",
+      "DISCOVER"
+    ],
+    "name": "Nightmare Fuel",
+    "rarity": "COMMON",
+    "set": "EMERALD_DREAM",
+    "text": "<b>Discover</b> a copy\nof a minion in your opponent's deck. <b>Combo:</b> With a <b>Dark Gift</b>.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Kevin Sidharta",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 120647,
+    "flavor": "\"I've played this game before!\"",
+    "howToEarnGolden": "Earnable on the <i>Across the Timeways</i> Tavern Pass.",
+    "id": "TIME_039",
+    "mechanics": [
+      "DISCOVER"
+    ],
+    "name": "Deja Vu",
+    "rarity": "RARE",
+    "set": "TIME_TRAVEL",
+    "text": "<b>Discover</b> a copy\nof a card in your opponent's hand.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "James Ryman",
+    "attack": 5,
+    "cardClass": "NEUTRAL",
+    "collectible": true,
+    "cost": 15,
+    "dbfId": 128389,
+    "elite": true,
+    "flavor": "(2*\"Tcetihcra Dlareme ,Ayerf\")/2 + (\"Ecnecserolffe\" - \"Aetherial Kindling\")",
+    "health": 7,
+    "id": "BE_017",
+    "name": "N'Zoth, Dream's End",
+    "rarity": "LEGENDARY",
+    "referencedTags": [
+      "DEATHRATTLE"
+    ],
+    "set": "BE",
+    "text": "[x]<b>Old God</b>\nCost (1) less for each\n<b>Deathrattle</b> minion you've\n   summoned this game.",
+    "type": "MINION"
+  },
+  {
+    "artist": "Graven Tung",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 0,
+    "dbfId": 365,
+    "flavor": "Rogue dance troops will sometimes Shadowstep away at the end of a performance.  Crowds love it.",
+    "id": "EX1_144",
+    "name": "Shadowstep",
+    "rarity": "COMMON",
+    "set": "EXPERT1",
+    "spellSchool": "SHADOW",
+    "text": "Return a friendly minion to your hand. It costs (2) less.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Clint Langley",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 0,
+    "dbfId": 1158,
+    "flavor": "\"Be Prepared\" - Rogue Motto",
+    "id": "EX1_145",
+    "name": "Preparation",
+    "rarity": "EPIC",
+    "set": "EXPERT1",
+    "text": "The next spell you cast this turn costs (2) less.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Joe Wilson",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 0,
+    "dbfId": 40437,
+    "flavor": "There is something funny about this coin… can't quite put my finger on it…",
+    "id": "CFM_630",
+    "name": "Counterfeit Coin",
+    "rarity": "RARE",
+    "set": "GANGS",
+    "text": "Gain 1 Mana Crystal this turn only.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Mauricio Herrera",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 2,
+    "dbfId": 45535,
+    "flavor": "Works on weapons, missiles, and taxes.",
+    "id": "LOOT_214",
+    "mechanics": [
+      "SECRET"
+    ],
+    "name": "Evasion",
+    "rarity": "EPIC",
+    "referencedTags": [
+      "IMMUNE"
+    ],
+    "set": "LOOTAPALOOZA",
+    "text": "<b>Secret:</b> After your hero takes damage, become <b>Immune</b> this turn.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Matt Dixon",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 2,
+    "dbfId": 61159,
+    "flavor": "You know, it's probably just cheaper to find a place that sells the plushie…",
+    "id": "DMF_515",
+    "mechanics": [
+      "COMBO"
+    ],
+    "name": "Swindle",
+    "rarity": "COMMON",
+    "set": "DARKMOON_FAIRE",
+    "text": "Draw a spell.\n<b>Combo:</b> And a minion.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "L. Lullabi & K. Turovec",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 3,
+    "dbfId": 63358,
+    "flavor": "This page left intentionally blank.",
+    "id": "WC_016",
+    "isMiniSet": true,
+    "name": "Shroud of Concealment",
+    "rarity": "RARE",
+    "referencedTags": [
+      "STEALTH"
+    ],
+    "set": "THE_BARRENS",
+    "spellSchool": "SHADOW",
+    "text": "Draw 2 minions. Any played this turn gain <b>Stealth</b> for 1 turn.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Jason Kang",
+    "attack": 2,
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 65597,
+    "durability": 0,
+    "flavor": "Popular around Stormwind for slashing prices.",
+    "health": 2,
+    "id": "DED_004",
+    "isMiniSet": true,
+    "mechanics": [
+      "TRADEABLE"
+    ],
+    "name": "Blackwater Cutlass",
+    "rarity": "COMMON",
+    "set": "STORMWIND",
+    "text": "[x]<b>Tradeable</b>\nAfter you <b>Trade</b> this,\nreduce the Cost of a spell\nin your hand by (1).",
+    "type": "WEAPON"
+  },
+  {
+    "artist": "Steven Prescott",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 72119,
+    "flavor": "Rogues want me\nFish fear me",
+    "id": "TSC_916",
+    "mechanics": [
+      "COMBO",
+      "DREDGE"
+    ],
+    "name": "Gone Fishin'",
+    "rarity": "RARE",
+    "set": "THE_SUNKEN_CITY",
+    "text": "<b>Dredge</b>.\n<b>Combo:</b> Draw a card.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "A. J. Nazzaro",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 103341,
+    "flavor": "\"Woohoo! I'm so glad I dug up a pirate!\"",
+    "id": "TOY_510",
+    "name": "Dig for Treasure",
+    "rarity": "RARE",
+    "set": "WHIZBANGS_WORKSHOP",
+    "text": "Draw a minion. If it's a Pirate, get a Coin.",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Daniil Kudriavtsev",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 2,
+    "dbfId": 117697,
+    "flavor": "Are the Shrouded Shells actually great trackers, or are the Cult of the Damned just REALLY bad about leaving secret maps lying around?",
+    "id": "TLC_515",
+    "mechanics": [
+      "DISCOVER"
+    ],
+    "name": "Cultist Map",
+    "rarity": "RARE",
+    "set": "THE_LOST_CITY",
+    "spellSchool": "SHADOW",
+    "text": "<b>Discover</b> a card from your deck. If you play it this turn, also pick one of the others.",
+    "type": "SPELL"
+  }
+]

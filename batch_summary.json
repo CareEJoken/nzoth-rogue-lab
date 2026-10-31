@@ -1,0 +1,18 @@
+{
+  "experiments": [
+    "guide_first_empty",
+    "guide_first_target",
+    "guide_second_empty",
+    "guide_second_target",
+    "weighted_first_empty",
+    "cheap_first_empty",
+    "depth3_first_empty",
+    "weighted_second_empty",
+    "natural_first_empty",
+    "natural_second_empty",
+    "depth3_second_empty",
+    "cheap_second_empty"
+  ],
+  "games": 1900000,
+  "elapsed_seconds": 364.63340950012207
+}

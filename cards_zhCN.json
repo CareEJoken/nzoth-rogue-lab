@@ -1,0 +1,364 @@
+[
+  {
+    "artist": "Alex Horley Orlandelli",
+    "attack": 3,
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 5,
+    "dbfId": 45936,
+    "faction": "ALLIANCE",
+    "flavor": "在他手里任何东西都可以变成蜡烛。",
+    "health": 3,
+    "id": "LOOT_412",
+    "mechanics": [
+      "DEATHRATTLE"
+    ],
+    "name": "狗头人幻术师",
+    "rarity": "RARE",
+    "set": "LOOTAPALOOZA",
+    "text": "<b>亡语：</b>从你的手牌中召唤一个随从的\n1/1复制。",
+    "type": "MINION"
+  },
+  {
+    "artist": "Konstantin Turovec",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 51375,
+    "flavor": "“随从越多，我的财宝越多。狗头人就这么算账！”",
+    "id": "DAL_010",
+    "name": "托瓦格尔的阴谋",
+    "rarity": "RARE",
+    "set": "DALARAN",
+    "text": "选择一个随从。将它的1张复制洗入你的牌库。<i>（每回合都会升级！）</i>",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Grace Liu",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 63359,
+    "flavor": "终于变回了正常的变异鱼……",
+    "id": "WC_017",
+    "isMiniSet": true,
+    "name": "美味变异鱼",
+    "rarity": "RARE",
+    "referencedTags": [
+      "STEALTH"
+    ],
+    "set": "THE_BARRENS",
+    "text": "将双方玩家手牌中的一张随从牌变形成为海盗或<b>潜行</b>随从牌。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Mauricio Herrera",
+    "attack": 1,
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 76259,
+    "faction": "HORDE",
+    "flavor": "有些人还不明白，“冰冷，黑心”的生物可能并不只是比喻……",
+    "health": 3,
+    "id": "TID_078",
+    "isMiniSet": true,
+    "mechanics": [
+      "BATTLECRY"
+    ],
+    "name": "碎冰蹒跚者",
+    "race": "ELEMENTAL",
+    "races": [
+      "ELEMENTAL"
+    ],
+    "rarity": "RARE",
+    "referencedTags": [
+      "DEATHRATTLE"
+    ],
+    "set": "THE_SUNKEN_CITY",
+    "text": "<b>战吼：</b>你的下一个<b>亡语</b>随从的法力值消耗减少（1）点，但会在使用后立即死亡。",
+    "type": "MINION"
+  },
+  {
+    "artist": "Alex Stone",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 2,
+    "dbfId": 77557,
+    "flavor": "德拉卡给予了对手不少骨粒。",
+    "id": "REV_939",
+    "name": "锯齿骨刺",
+    "rarity": "RARE",
+    "set": "REVENDRETH",
+    "text": "对一个随从造成$3点伤害。如果该随从死亡，在本回合中，你的下一张牌法力值消耗减少（2）点。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Anton Zemskov",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 0,
+    "dbfId": 86092,
+    "elite": true,
+    "flavor": "每当你施放一个法术，变形成为该法术卡牌趣文的复制。",
+    "hideStats": true,
+    "id": "RLK_567",
+    "name": "殒命暗影",
+    "rarity": "LEGENDARY",
+    "set": "RETURN_OF_THE_LICH_KING",
+    "spellSchool": "SHADOW",
+    "text": "每当你施放一个法术，变形成为该法术的复制。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Tanamaes Leejierasaes",
+    "attack": 1,
+    "cardClass": "ROGUE",
+    "classes": [
+      "ROGUE",
+      "DEMONHUNTER"
+    ],
+    "collectible": true,
+    "cost": 2,
+    "dbfId": 102254,
+    "durability": 0,
+    "flavor": "疾速矿锄急速出，狂锄矿锄出极速。出矿锄，粗矿出，锄出粗矿铸矿锄。",
+    "health": 2,
+    "id": "DEEP_014",
+    "isMiniSet": true,
+    "mechanics": [
+      "TRIGGER_VISUAL"
+    ],
+    "name": "疾速矿锄",
+    "rarity": "COMMON",
+    "set": "WILD_WEST",
+    "text": "在你的英雄攻击后，抽一张牌。",
+    "type": "WEAPON"
+  },
+  {
+    "artist": "Ivan Fomin",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 115088,
+    "flavor": "所有的“但不能少于（1）点”全都被换成了“但不能多于（1）点”。",
+    "id": "EDR_528",
+    "mechanics": [
+      "COMBO",
+      "DISCOVER"
+    ],
+    "name": "梦魇供能",
+    "rarity": "COMMON",
+    "set": "EMERALD_DREAM",
+    "text": "从你对手的牌库中<b>发现</b>一张随从牌的复制。<b>连击：</b>并使其具有<b>黑暗之赐</b>。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Kevin Sidharta",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 120647,
+    "flavor": "“这一局我梦到过！”",
+    "howToEarnGolden": "购买<i>穿越时间流</i>炉石通行证后开放解锁。",
+    "id": "TIME_039",
+    "mechanics": [
+      "DISCOVER"
+    ],
+    "name": "似曾相识",
+    "rarity": "RARE",
+    "set": "TIME_TRAVEL",
+    "text": "<b>发现</b>一张你的对手手牌的复制。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "James Ryman",
+    "attack": 5,
+    "cardClass": "NEUTRAL",
+    "collectible": true,
+    "cost": 15,
+    "dbfId": 128389,
+    "elite": true,
+    "flavor": "（2*“师筑构翠翡，亚蕾弗”）/2+（“放齐花百”-“虚渺延火”）",
+    "health": 7,
+    "id": "BE_017",
+    "name": "恩佐斯，梦境之末",
+    "rarity": "LEGENDARY",
+    "referencedTags": [
+      "DEATHRATTLE"
+    ],
+    "set": "BE",
+    "text": "<b>古神</b>\n在本局对战中，你每召唤过一个<b>亡语</b>随从，本牌的法力值消耗便减少（1）点。",
+    "type": "MINION"
+  },
+  {
+    "artist": "Graven Tung",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 0,
+    "dbfId": 365,
+    "flavor": "潜行者的攻击有如舞蹈，有时他们会以暗影步结束这一切。这不是什么终结技，只因为观众喜欢这样子。",
+    "id": "EX1_144",
+    "name": "暗影步",
+    "rarity": "COMMON",
+    "set": "EXPERT1",
+    "spellSchool": "SHADOW",
+    "text": "将一个友方随从移回你的手牌，它的法力值消耗减少\n（2）点。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Clint Langley",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 0,
+    "dbfId": 1158,
+    "flavor": "“随时准备伺机待发。”——潜行者座右铭",
+    "id": "EX1_145",
+    "name": "伺机待发",
+    "rarity": "EPIC",
+    "set": "EXPERT1",
+    "text": "在本回合中，你所施放的下一个法术的法力值消耗减少（2）点。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Joe Wilson",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 0,
+    "dbfId": 40437,
+    "flavor": "这些伪造的幸运币…似乎是玉莲帮的杰作。",
+    "id": "CFM_630",
+    "name": "伪造的幸运币",
+    "rarity": "RARE",
+    "set": "GANGS",
+    "text": "在本回合中，获得一个法力\n水晶。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Mauricio Herrera",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 2,
+    "dbfId": 45535,
+    "flavor": "可以避开武器、导弹和税收。",
+    "id": "LOOT_214",
+    "mechanics": [
+      "SECRET"
+    ],
+    "name": "闪避",
+    "rarity": "EPIC",
+    "referencedTags": [
+      "IMMUNE"
+    ],
+    "set": "LOOTAPALOOZA",
+    "text": "<b>奥秘：</b>你的英雄在受到伤害后，在本回合中<b>免疫</b>。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Matt Dixon",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 2,
+    "dbfId": 61159,
+    "flavor": "有一个地方，毛绒玩具卖得很便宜，你懂的……",
+    "id": "DMF_515",
+    "mechanics": [
+      "COMBO"
+    ],
+    "name": "行骗",
+    "rarity": "COMMON",
+    "set": "DARKMOON_FAIRE",
+    "text": "抽一张法术牌。<b>连击：</b>并抽一张随从牌。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "L. Lullabi & K. Turovec",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 3,
+    "dbfId": 63358,
+    "flavor": "这一页故意留白了。",
+    "id": "WC_016",
+    "isMiniSet": true,
+    "name": "潜伏帷幕",
+    "rarity": "RARE",
+    "referencedTags": [
+      "STEALTH"
+    ],
+    "set": "THE_BARRENS",
+    "spellSchool": "SHADOW",
+    "text": "抽两张随从牌，在本回合中使用则使其获得<b>潜行</b>一回合。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Jason Kang",
+    "attack": 2,
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 65597,
+    "durability": 0,
+    "flavor": "享誉暴风城的砍价利器。",
+    "health": 2,
+    "id": "DED_004",
+    "isMiniSet": true,
+    "mechanics": [
+      "TRADEABLE"
+    ],
+    "name": "黑水弯刀",
+    "rarity": "COMMON",
+    "set": "STORMWIND",
+    "text": "<b>可交易</b>\n在你<b>交易</b>此牌后，使你手牌中的一张法术牌的法力值消耗减少（1）点。",
+    "type": "WEAPON"
+  },
+  {
+    "artist": "Steven Prescott",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 72119,
+    "flavor": "潜行者好爱我\n小鱼儿好怕我",
+    "id": "TSC_916",
+    "mechanics": [
+      "COMBO",
+      "DREDGE"
+    ],
+    "name": "垂钓时光",
+    "rarity": "RARE",
+    "set": "THE_SUNKEN_CITY",
+    "text": "<b>探底</b>。<b>连击：</b>抽一张牌。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "A. J. Nazzaro",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 1,
+    "dbfId": 103341,
+    "flavor": "“哇！我挖出来一个海盗，太棒啦！”",
+    "id": "TOY_510",
+    "name": "挖掘宝藏",
+    "rarity": "RARE",
+    "set": "WHIZBANGS_WORKSHOP",
+    "text": "抽一张随从牌。如果是海盗牌，获取一张幸运币。",
+    "type": "SPELL"
+  },
+  {
+    "artist": "Daniil Kudriavtsev",
+    "cardClass": "ROGUE",
+    "collectible": true,
+    "cost": 2,
+    "dbfId": 117697,
+    "flavor": "究竟是隐甲龟的侦查技艺确实精湛？还是说诅咒教派离谱过于离谱，把他们的机密地图到处乱丢？",
+    "id": "TLC_515",
+    "mechanics": [
+      "DISCOVER"
+    ],
+    "name": "异教地图",
+    "rarity": "RARE",
+    "set": "THE_LOST_CITY",
+    "spellSchool": "SHADOW",
+    "text": "从你的牌库中<b>发现</b>一张牌，如果你在本回合中使用该牌，再从其余选项中选择一张。",
+    "type": "SPELL"
+  }
+]

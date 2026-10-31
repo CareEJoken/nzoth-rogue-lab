@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>恩佐斯启动实验室</title>
+<style>
+:root{--paper:#f5f2e9;--ink:#233c3b;--quiet:#65736e;--line:#d9ddd3;--teal:#137d74;--teal-soft:#e3eeE8;--orange:#bc6a35;--orange-soft:#f4e6d8;--white:#fffdf7;--navy:#263f46;--error:#a83e35;--mono:"Cascadia Code","Consolas",monospace;--serif:"Palatino Linotype","STZhongsong","SimSun",serif;--sans:"Microsoft YaHei","PingFang SC",sans-serif}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 96% 0%,#dfe9df 0,transparent 45%),linear-gradient(130deg,#f9f6ee,var(--paper));font:14px/1.65 var(--sans)}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.38}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--orange);outline-offset:3px}button{color:var(--ink)}.shell{max-width:1500px;padding:32px 36px 24px;margin:auto}.mast{display:flex;align-items:center;justify-content:space-between;gap:32px;border-top:3px solid var(--ink);padding:20px 0 22px}.eyebrow{font:11px var(--mono);letter-spacing:2px;color:var(--quiet)}h1{font:400 clamp(28px,3vw,43px)/1.3 var(--serif);letter-spacing:1px;margin:7px 0}.subtitle{color:var(--quiet);margin:4px 0 0;font-size:13px}.mast-right{min-width:235px}.field-label{display:block;font-size:12px;color:var(--quiet);margin-bottom:5px}select,input{color:var(--ink);border:1px solid var(--line);background:var(--white);border-radius:4px;padding:10px 11px;min-height:44px}select{width:100%}.badge-line{display:flex;flex-wrap:wrap;gap:14px;padding-bottom:17px;border-bottom:1px solid var(--line);font:11px var(--mono);letter-spacing:.5px}.badge-line span:before{content:"";display:inline-block;width:5px;height:5px;margin:0 7px 2px 0;background:var(--teal)}.workspace{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:28px;margin-top:25px}.panel{min-width:0}.panel-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:17px}.section-no{font:12px var(--mono);color:var(--teal);margin-right:8px}h2{font:400 23px var(--serif);margin:0}h3{font:500 14px var(--sans);margin:0}.micro{font:11px var(--mono);color:var(--quiet)}.control-box{padding:16px 18px;border:1px solid var(--line);background:#ffffff66;border-radius:6px}.seed-form{display:flex;align-items:end;gap:8px;flex-wrap:wrap}.seed-field{flex:1;min-width:135px}.seed-field input{width:100%;font-family:var(--mono)}.btn{background:var(--white);border:1px solid var(--line);border-radius:4px;min-height:40px;padding:9px 13px;line-height:1.4}.btn.primary{color:var(--white);background:var(--teal);border-color:var(--teal)}.btn.quiet{background:transparent}.side-switch{display:flex;gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}.side-switch button{border:0;background:var(--white);padding:8px 15px;min-height:40px}.side-switch button[aria-pressed=true]{background:var(--ink);color:var(--white)}.subcontrols{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:13px;flex-wrap:wrap}.hint{font-size:11px;color:var(--quiet)}.error{color:var(--error);font-size:12px;margin-top:7px;min-height:0}.playback{display:flex;gap:6px;margin-top:15px;align-items:center;flex-wrap:wrap}.playback .counter{margin-left:auto;font:12px var(--mono);color:var(--quiet)}.range-row{display:flex;align-items:center;gap:10px;margin:8px 0}.range-row input{padding:0;min-height:24px;border:0;background:transparent;width:100%;accent-color:var(--teal)}.range-row label{font:11px var(--mono);white-space:nowrap}.turn-jumps{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:16px}.turn-jumps button{border:0;background:transparent;border-radius:3px;min-height:30px;padding:3px 9px;color:var(--quiet);font-size:12px}.turn-jumps button.active{background:var(--teal-soft);color:var(--teal)}.tabletop{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--white)}.state-bar{padding:13px 17px;display:flex;gap:13px;flex-wrap:wrap;align-items:center;background:var(--navy);color:var(--white)}.turn-display{font:19px var(--serif)}.mana-display{font:23px var(--mono);color:#9ed2c4}.state-bar .micro{color:#bacdc5}.state-pills{display:flex;flex-wrap:wrap;gap:5px;padding:9px 15px;background:#edf1e9;border-bottom:1px solid var(--line)}.pill{font-size:11px;padding:3px 7px;border-radius:3px;background:#dfe8df;color:var(--ink)}.pill.on{background:var(--teal);color:var(--white)}.board{display:grid;grid-template-columns:1fr 1fr;gap:15px;padding:13px 15px;background:repeating-linear-gradient(0deg,transparent 0,transparent 23px,#273f3d05 24px)}.board-label{font-size:11px;color:var(--quiet);margin-bottom:5px}.board-pieces{display:flex;flex-wrap:wrap;gap:6px;min-height:56px;align-items:center}.piece{border:1px solid var(--line);background:#f0f1e8;padding:7px 10px;border-radius:4px;font-size:12px}.piece strong{display:block;font-weight:500}.piece.nzoth{background:var(--orange-soft);border-color:#dfc2a9}.empty-board{font:12px var(--serif);color:#88918a}.weapon-line{border-top:1px solid var(--line);padding:7px 15px;font-size:11px;color:var(--quiet)}.hand-label{display:flex;align-items:center;justify-content:space-between;padding:12px 15px 8px;font-size:12px}.hand{display:grid;grid-template-columns:repeat(auto-fill,minmax(94px,1fr));gap:7px;padding:0 14px 15px}.card{position:relative;border:1px solid var(--line);border-radius:4px;padding:9px 8px 8px;min-height:122px;text-align:left;background:linear-gradient(145deg,#fdfcf5,#ecefe4);display:flex;flex-direction:column;justify-content:space-between;gap:8px;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-3px);border-color:var(--teal)}.card.minion{background:linear-gradient(145deg,#f8fcf4,#dfeae0);border-top:3px solid var(--teal)}.card.nzoth{background:linear-gradient(145deg,#fff8ec,#edd7bf);border-top-color:var(--orange)}.card.incoming{animation:deal .35s ease-out}.card-head{display:flex;align-items:center;justify-content:space-between;gap:3px}.cost{font:19px var(--serif);color:var(--teal)}.card.nzoth .cost{color:var(--orange)}.old-cost{text-decoration:line-through;font:10px var(--mono);color:var(--quiet);margin-left:4px}.core-tag{font:9px var(--mono);letter-spacing:1px;color:var(--quiet)}.card-name{font:13px/1.4 var(--serif);overflow-wrap:anywhere;flex:1;display:flex;align-items:center}.card-type{font-size:10px;color:var(--quiet)}.last-event{margin:14px 0;padding:12px 14px;border-left:3px solid var(--teal);background:var(--teal-soft)}.last-event.success{border-left-color:var(--orange);background:var(--orange-soft)}.last-event h3{font-family:var(--serif);font-size:16px;margin-bottom:4px}.event-details{margin:0;padding-left:17px;font-size:12px;color:var(--quiet)}.status-result{display:inline-block;font:11px var(--mono);color:var(--teal);padding:3px 0}.timeline-title{display:flex;justify-content:space-between;align-items:center;margin:18px 0 8px}.timeline{list-style:none;margin:0;padding:0;max-height:290px;overflow-y:auto;border-top:1px solid var(--line);scrollbar-width:thin}.timeline li{border-bottom:1px solid var(--line)}.timeline button{width:100%;border:0;min-height:38px;display:grid;grid-template-columns:38px 1fr 48px;gap:8px;text-align:left;background:transparent;padding:7px 9px;font-size:12px;align-items:center}.timeline button.active{background:var(--teal-soft)}.timeline button .step-no{font:10px var(--mono);color:var(--quiet)}.timeline .fee{text-align:right;font:11px var(--mono);color:var(--quiet)}.timeline .milestone{font-weight:500}.deck-remaining{font-size:12px;margin-top:12px}.deck-remaining summary{cursor:pointer;color:var(--quiet)}.deck-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px 15px;padding-top:7px}.deck-list div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dotted var(--line)}.stats-header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 10px}.sample-note{color:var(--quiet);font:11px var(--mono)}.legend{display:flex;gap:15px;font-size:12px;align-items:center;margin:7px 0 5px}.legend span:before{content:"";display:inline-block;width:14px;height:3px;margin:0 6px 3px 0;background:var(--teal)}.legend span.second:before{background:var(--orange)}.figure{margin:0 0 19px}.figure figcaption{font:500 14px var(--sans);display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:5px}.chart-container{position:relative;min-width:0}.chart{display:block;width:100%;height:232px;overflow:visible}.chart text{font-family:var(--sans);fill:var(--quiet);font-size:11px}.chart .axis-title{font-size:10px}.chart .grid{stroke:var(--line);stroke-width:1}.chart .axis{stroke:#9ca89e;stroke-width:1}.chart .value-label{font-family:var(--mono);fill:var(--ink);font-size:10px}.tooltip{display:none;position:absolute;z-index:5;background:var(--ink);color:var(--white);padding:9px 12px;border-radius:4px;font-size:11px;pointer-events:none;min-width:220px;max-width:calc(100% - 8px);box-shadow:0 5px 14px #223d3b22}.tooltip b{font-weight:500}.tooltip p{margin:3px 0}.figure-note{font-size:11px;color:var(--quiet);margin:3px 0}.stats-table{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed;margin-top:6px}.stats-table th{font-weight:400;color:var(--quiet);text-align:right;padding:7px 4px;border-bottom:1px solid var(--ink)}.stats-table td{text-align:right;padding:9px 4px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}.stats-table th:first-child,.stats-table td:first-child{text-align:left;width:57px}.stats-table small{font:10px var(--mono);color:var(--quiet);display:block}.stats-table td.emphasis{color:var(--teal)}.stats-table td.second{color:var(--orange)}.stats-caption{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:11px}.stats-caption .btn{font-size:11px;min-height:34px;padding:7px 10px}.model-notes{margin-top:20px;padding:12px 0;border-top:1px solid var(--line);font-size:12px;color:var(--quiet)}.model-notes summary{cursor:pointer;color:var(--ink)}.model-notes ul{margin:8px 0;padding-left:18px}.bottom{display:flex;justify-content:space-between;gap:20px;font:10px var(--mono);color:var(--quiet);margin-top:24px;padding-top:13px;border-top:1px solid var(--line);flex-wrap:wrap}.bottom a{color:var(--teal)}dialog{border:1px solid var(--line);border-radius:8px;background:var(--white);color:var(--ink);padding:25px;width:min(440px,calc(100vw - 32px));max-height:85vh;overflow:auto}dialog::backdrop{background:#20373188}dialog h2{font-size:25px;margin:8px 0 14px}dialog p{white-space:pre-line}dialog .close{float:right}dialog .rule-cost{font:12px var(--mono);color:var(--teal)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@keyframes deal{from{transform:translateY(7px);opacity:.55}to{transform:none;opacity:1}}@media(min-width:1250px){.hand{grid-template-columns:repeat(5,minmax(0,1fr))}}@media(max-width:1000px){.workspace{grid-template-columns:1fr;gap:35px}.shell{max-width:800px;padding:24px}.stats-charts{display:grid;grid-template-columns:1fr 1fr;gap:18px}.chart{height:225px}}@media(max-width:640px){.shell{padding:18px 14px}.mast{align-items:stretch;flex-direction:column;gap:16px;padding:15px 0}.mast-right{min-width:0}.badge-line{gap:8px 14px;font-size:10px}.workspace{margin-top:19px}.control-box{padding:13px}.stats-charts{grid-template-columns:1fr;gap:0}.card{min-height:112px}.seed-form .primary{flex:1}.playback .btn{padding:9px 10px}.board{gap:9px}.stats-table{font-size:11px}.stats-table small{font-size:9px}.panel-heading .micro{font-size:10px}.bottom{font-size:10px}.hand{grid-template-columns:repeat(3,minmax(0,1fr))}.stats-table th,.stats-table td{padding-left:2px;padding-right:2px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <header class="mast">
+    <div><div class="eyebrow">WILD / THREE-MINION ROGUE</div><h1>恩佐斯启动实验室</h1><p class="subtitle">逐步看一局如何启动，再与 200,000 次模拟对照。</p></div>
+    <div class="mast-right"><label class="field-label" for="preset">实验口径 · 同时作用于单局与图表</label><select id="preset"><option value="guide">攻略留牌 / 对手空场</option><option value="target">攻略留牌 / 对手提供骨刺目标</option><option value="cheap">偏加速留牌 / 对手空场</option><option value="natural">禁用主动过牌 / 对手空场</option></select></div>
+  </header>
+  <div class="badge-line"><span>30 张牌 · 3 个随从</span><span>金鱼模型 / 不计对手干扰</span><span>PYTHON 随机流一致</span><span>离线运行 · 无外部依赖</span></div>
+  <div class="workspace">
+    <section class="panel" aria-labelledby="replay-heading">
+      <div class="panel-heading"><h2 id="replay-heading"><span class="section-no">01</span>单局回放</h2><span id="outcome" class="status-result" aria-live="polite"></span></div>
+      <div class="control-box">
+        <form id="seed-form" class="seed-form"><div class="seed-field"><label class="field-label" for="seed">整数随机种子</label><input id="seed" type="text" inputmode="numeric" value="20261031" maxlength="60" autocomplete="off" spellcheck="false" aria-describedby="seed-hint"></div><button class="btn primary" type="submit">生成回放</button><button class="btn quiet" id="random-seed" type="button">随机一局</button></form>
+        <div class="subcontrols"><div class="side-switch" aria-label="单局先后手"><button type="button" data-side="first" aria-pressed="true">先手</button><button type="button" data-side="second" aria-pressed="false">后手 + 硬币</button></div><span class="hint" id="seed-hint">相同种子 + 相同口径 = 相同过程</span></div><div id="error" class="error" role="alert"></div>
+      </div>
+      <div class="playback"><button id="prev" class="btn" type="button">上一步</button><button id="play" class="btn primary" type="button">自动播放</button><button id="next" class="btn" type="button">下一步</button><button id="finish" class="btn quiet" type="button">看结果</button><span id="step-counter" class="counter"></span></div>
+      <div class="range-row"><label for="scrubber">步骤</label><input id="scrubber" type="range" min="0" max="1" value="0" aria-label="回放步骤"></div><div id="turn-jumps" class="turn-jumps" aria-label="跳到指定回合"></div>
+      <div class="tabletop">
+        <div class="state-bar"><span id="turn-display" class="turn-display">起手阶段</span><span class="micro">可用法力</span><span id="mana" class="mana-display">0</span><span class="micro" id="deck-count"></span></div>
+        <div id="pills" class="state-pills"></div>
+        <div class="board"><div><div class="board-label">我方战场</div><div id="friendly-board" class="board-pieces"></div></div><div><div class="board-label">对手战场</div><div id="enemy-board" class="board-pieces"></div></div></div>
+        <div id="weapon" class="weapon-line"></div>
+        <div class="hand-label"><span id="hand-count">手牌</span><span class="hint">点击卡牌查看效果与当前费用</span></div><div id="hand" class="hand"></div>
+      </div>
+      <div id="current-event" class="last-event" aria-live="polite"></div>
+      <div class="timeline-title"><h3>事件时间线</h3><span class="micro">点击任一步骤回看</span></div><ol id="timeline" class="timeline"></ol>
+      <details class="deck-remaining"><summary id="remaining-summary">剩余牌库组成（不展示未知顺序）</summary><div id="remaining-list" class="deck-list"></div></details>
+    </section>
+    <section class="panel" aria-labelledby="stats-heading">
+      <div class="panel-heading"><h2 id="stats-heading"><span class="section-no">02</span>200,000 次统计</h2><span class="micro">先后手各 200,000 局</span></div>
+      <div class="stats-header"><span id="stats-label" class="sample-note"></span><span class="micro">批量种子 20261031</span></div>
+      <div class="legend"><span>先手</span><span class="second">后手</span></div>
+      <div class="stats-charts">
+        <figure class="figure"><figcaption>累计启动率 <span class="micro">截至该回合 / %</span></figcaption><div class="chart-container"><svg id="cumulative-chart" class="chart" role="img" aria-label="先后手各回合累计启动概率折线图"></svg><div class="tooltip" role="tooltip"></div></div><p class="figure-note">含更早回合启动；细线为 95% Wilson 置信区间。</p></figure>
+        <figure class="figure"><figcaption>首次启动分布 <span class="micro">恰好在该回合 / %</span></figcaption><div class="chart-container"><svg id="first-chart" class="chart" role="img" aria-label="先后手首次启动回合和五费未启动概率柱状图"></svg><div class="tooltip" role="tooltip"></div></div><p class="figure-note">每组所有柱子的概率之和为 100%。</p></figure>
+      </div>
+      <h3>三 / 四 / 五费 · 精确数据</h3>
+      <table class="stats-table"><caption class="sr-only">当前实验先后手各回合首次与累计启动概率</caption><thead><tr><th>回合</th><th>先手首次</th><th>先手累计</th><th>后手首次</th><th>后手累计</th></tr></thead><tbody id="stats-rows"></tbody></table>
+      <div class="stats-caption"><span class="hint">累计值下方：启动局数 / 200,000</span><button id="export-csv" class="btn quiet" type="button">导出当前数据 CSV</button></div>
+      <p class="figure-note" style="margin-top:14px">图表读取已完成的 20 万次真实模拟结果；修改单局种子不会重新计算或改写这些统计。</p>
+      <details class="model-notes"><summary>规则、留牌与模型边界</summary><ul id="model-notes"></ul></details>
+      <details class="model-notes"><summary>完整 30 张牌表</summary><div id="deck-full" class="deck-list"></div></details>
+    </section>
+  </div>
+  <footer class="bottom"><span>浏览器与 Python：1,232 组种子与口径回放一致性校验通过</span><span>卡牌 / 牌表快照：2026-10-31 · 数据与规则已嵌入本页</span></footer>
+</main>
+<dialog id="card-dialog" aria-labelledby="dialog-title"><button id="dialog-close" class="btn quiet close" type="button">关闭</button><div id="dialog-cost" class="rule-cost"></div><h2 id="dialog-title"></h2><p id="dialog-text"></p><p id="dialog-note" class="hint"></p></dialog>
+<script>
+/*__ENGINE__*/
+</script>
+<script>
+(()=>{
+const STATS=/*__STATS__*/null;
+const CARD_DATA=/*__CARDS__*/null;
+// Directly opening the source template should use the built, offline dashboard.
+if(STATS===null||CARD_DATA===null||typeof NzothEngine==='undefined'){
+  window.location.replace('nzoth-lab.html');
+  return;
+}
+const $=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pct=n=>(n*100).toFixed(2)+'%',number=n=>n.toLocaleString('en-US');
+const PRESETS={guide:{label:'攻略留牌 · 对手空场',prefix:'guide',suffix:'empty'},target:{label:'攻略留牌 · 骨刺目标',prefix:'guide',suffix:'target'},cheap:{label:'偏加速留牌 · 对手空场',prefix:'cheap',suffix:'empty'},natural:{label:'禁用主动过牌 · 对手空场',prefix:'natural',suffix:'empty'}};
+let side='first',preset='guide',replay=null,index=0,timer=null;
+function getStats(){const p=PRESETS[preset];return [STATS[p.prefix+'_first_'+p.suffix],STATS[p.prefix+'_second_'+p.suffix]];}
+function pause(){if(timer!==null)clearInterval(timer);timer=null;$('play').textContent='自动播放';$('play').setAttribute('aria-pressed','false');}
+function generate(){
+  pause();$('error').textContent='';const input=$('seed').value.trim();
+  if(!/^-?\d{1,59}$/.test(input)){$('error').textContent='请输入整数种子，例如 20261031；支持负整数。原回放未更新。';return false;}
+  try{
+    replay=NzothEngine.simulate(input,{second:side==='second',enemy:preset==='target',policy:preset==='cheap'?'cheap':'guide',naturalOnly:preset==='natural'});index=0;
+    $('scrubber').max=replay.events.length-1;
+    $('timeline').innerHTML=replay.events.map((e,i)=>`<li><button type="button" data-step="${i}"><span class="step-no">${String(i+1).padStart(2,'0')}</span><span class="${['natural','success','failure','mulligan'].includes(e.type)?'milestone':''}">${esc(e.title)}</span><span class="fee">${e.paid!==undefined?e.paid+' 费':''}</span></button></li>`).join('');
+    $('turn-jumps').innerHTML=[0,1,2,3,4,5].map(t=>`<button type="button" data-turn="${t}" ${replay.events.some(e=>e.state.turn===t)?'':'disabled'}>${t?t+' 费':'起手'}</button>`).join('');
+    render();updateStats();return true;
+  }catch(e){$('error').textContent='模拟失败：'+e.message;console.error(e);return false;}
+}
+function move(i){if(!replay)return;index=Math.max(0,Math.min(replay.events.length-1,i));render();if(index===replay.events.length-1)pause();}
+function render(){
+  const e=replay.events[index],s=e.state,previous=index?replay.events[index-1].state:null;
+  $('step-counter').textContent=(index+1)+' / '+replay.events.length;$('scrubber').value=index;
+  $('prev').disabled=index===0;$('next').disabled=index===replay.events.length-1;$('finish').disabled=index===replay.events.length-1;
+  $('turn-display').textContent=s.turn?'第 '+s.turn+' 回合':'起手阶段';$('mana').textContent=s.mana;$('deck-count').textContent='牌库 '+s.deckCount+' 张';
+  $('outcome').textContent=s.started?'第 '+replay.turn+' 回合启动成功':(e.type==='failure'?'五费内未启动':'回放中 · '+(side==='first'?'先手':'后手'));
+  $('pills').innerHTML=[`<span class="pill ${s.combo?'on':''}">连击 ${s.combo?'已开启':'未开启'}</span>`,`<span class="pill">碎冰减费 −${s.ice_discount}</span>`,...(s.prep?[`<span class="pill">下一法术 −${s.prep}</span>`]:[]),...(s.next_discount?[`<span class="pill">下一张牌 −${s.next_discount}</span>`]:[]),...(s.burned?[`<span class="pill">已烧牌 ${s.burned}</span>`]:[])].join('');
+  $('friendly-board').innerHTML=[...(s.board_ice?['<div class="piece"><strong>碎冰蹒跚者</strong>1 / 3</div>']:[]),...(s.board_kobold?['<div class="piece"><strong>狗头人幻术师</strong>3 / 3</div>']:[]),...(s.started?['<div class="piece nzoth"><strong>恩佐斯入场</strong>1 / 1 复制</div>']:[])].join('')||'<span class="empty-board">暂无随从</span>';
+  $('enemy-board').innerHTML=s.enemy_target?'<div class="piece"><strong>骨刺可击杀目标</strong>本回合可用一次</div>':'<span class="empty-board">无可击杀目标</span>';
+  $('weapon').textContent=s.weapon>=0?NzothEngine.names[s.weapon]+' · '+(s.weapon===12?'1':'2')+' 攻 / '+s.durability+' 耐久 · '+(s.attacked?'本回合已攻击':'本回合可攻击'):'未装备武器';
+  $('hand-count').textContent='手牌 '+s.hand.length+' / 10';
+  const oldIds=new Set(previous?previous.hand.map(c=>c.uid):[]);
+  $('hand').innerHTML=s.hand.map(c=>`<button type="button" class="card ${c.kind<3?'minion':''} ${c.kind===2?'nzoth':''} ${!oldIds.has(c.uid)?'incoming':''}" data-card="${c.uid}" aria-label="${esc(NzothEngine.cardName(c))}，当前${c.cost}费"><span class="card-head"><span class="cost">${c.cost}${c.cost!==NzothEngine.COST[c.kind]?`<span class="old-cost">${NzothEngine.COST[c.kind]}</span>`:''}</span><span class="core-tag">${c.kind<3?'CORE':''}</span></span><span class="card-name">${esc(NzothEngine.cardName(c))}</span><span class="card-type">${c.shadow?'暗影复制':c.kind<3?'随从':NzothEngine.weapons.has(c.kind)?'武器':'法术'}</span></button>`).join('')||'<span class="hint">手牌为空</span>';
+  $('current-event').classList.toggle('success',s.started);
+  $('current-event').innerHTML=`<h3>${esc(e.title)}</h3><ul class="event-details">${e.details.map(x=>'<li>'+esc(x)+'</li>').join('')}</ul>`;
+  $('timeline').querySelectorAll('button').forEach(b=>{const active=+b.dataset.step===index;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
+  $('turn-jumps').querySelectorAll('button').forEach(b=>b.classList.toggle('active',+b.dataset.turn===s.turn));
+  $('remaining-summary').textContent='剩余 '+s.deckCount+' 张牌 · 随从 '+s.remaining.filter(x=>x[0]<3).reduce((a,x)=>a+x[1],0)+' 张（不展示未知顺序）';
+  $('remaining-list').innerHTML=s.remaining.map(([k,n])=>`<div><span>${esc(NzothEngine.names[k])}</span><span>×${n}</span></div>`).join('');
+}
+function notes(){
+  const common=['先手起手 3 张，后手 4 张；换牌后再得到幸运币。被换掉的实体不参与替换抽牌。','启动 = 合法触发幻术师亡语，手中的随从池只剩恩佐斯。不把仅抽齐组件算成功。','行骗先抽法术，连击才抽随从；潜伏帷幕抽两个随从；挖掘宝藏抽一个随从。','探底看底部 3 张，没连击不立即抽；地图从牌库发现最多 3 个不同选项，打出首选牌才有第二次选择。','交易不触发连击，先抽牌再插回弯刀，并随机减一个手中法术 1 费；矿锄通过英雄攻击抽牌。','出牌前先搜索可立即启动的路线，否则用与 Python 相同的经验评分决策；不能偷看未知牌库顺序。','对手不干扰、不斩杀、不移除我方碎冰者，英雄可以正常攻击；启动前不使用偷牌、变异鱼和阴谋。','统计的置信区间只覆盖抽样误差，不覆盖策略或规则假设误差。本程序不是最优操作上限证明。'];
+  const specific={guide:'留牌：保留三个随从、挖掘宝藏、行骗、潜伏帷幕（含重复牌）。',target:'留牌同攻略；从第二回合起，每回合对手提供一个骨刺能直接击杀的目标。空场模型仍可以骨刺击杀自己的碎冰者。',cheap:'留牌：保留三个随从、挖掘宝藏、潜伏帷幕；原始起手有检索牌时保留待发，有碎冰者时保留暗影步，不无条件保留行骗。',natural:'留牌仍采用攻略方案，但禁用所有主动过牌，只自然抽牌并准备、执行启动组合技。'};
+  $('model-notes').innerHTML=[specific[preset],...common].map(n=>'<li>'+esc(n)+'</li>').join('');
+}
+const NS='http://www.w3.org/2000/svg';
+function el(svg,name,attrs={},text=''){const node=document.createElementNS(NS,name);for(const [k,v]of Object.entries(attrs))node.setAttribute(k,v);if(text)node.textContent=text;svg.appendChild(node);return node;}
+function frame(svg){
+  const w=Math.max(260,svg.parentElement.clientWidth),h=232,m={l:43,r:17,t:20,b:34};svg.setAttribute('viewBox',`0 0 ${w} ${h}`);svg.replaceChildren();
+  const plotW=w-m.l-m.r,plotH=h-m.t-m.b,y=v=>m.t+(1-v)*plotH;
+  for(const p of [0,.25,.5,.75,1]){el(svg,'line',{x1:m.l,x2:w-m.r,y1:y(p),y2:y(p),class:'grid'});el(svg,'text',{x:m.l-7,y:y(p)+4,'text-anchor':'end'},String(p*100));}
+  el(svg,'text',{x:4,y:11,class:'axis-title'},'概率 %');el(svg,'line',{x1:m.l,x2:w-m.r,y1:y(0),y2:y(0),class:'axis'});
+  return {w,h,m,plotW,plotH,y};
+}
+function hookTooltip(svg,targets,html){
+  const box=svg.parentElement,tip=box.querySelector('.tooltip');
+  const show=(event,i)=>{tip.innerHTML=html(i);tip.style.display='block';const b=box.getBoundingClientRect(),x=event.clientX-b.left;tip.style.left=Math.max(4,Math.min(box.clientWidth-tip.offsetWidth-4,x-90))+'px';tip.style.top='24px';};
+  targets.forEach(([node,i])=>{node.addEventListener('pointermove',e=>show(e,i));node.addEventListener('pointerdown',e=>show(e,i));});
+  svg.addEventListener('pointerleave',()=>{tip.style.display='none';});
+}
+function charts(){
+  const data=getStats(),colors=['#137d74','#bc6a35'];
+  const svg=$('cumulative-chart'),f=frame(svg),x=i=>f.m.l+i*f.plotW/4,targets=[];
+  el(svg,'title',{},'先后手累计启动概率，样本量每组200000');
+  for(let i=0;i<5;i++)el(svg,'text',{x:x(i),y:f.h-12,'text-anchor':'middle'},(i+1)+'费');
+  data.forEach((r,j)=>{
+    const path=r.rows.map((v,i)=>(i?'L':'M')+x(i)+','+f.y(v.cumulative)).join(' ');
+    el(svg,'path',{d:path,fill:'none',stroke:colors[j],'stroke-width':(side==='first'?j===0:j===1)?3:1.8});
+    r.rows.forEach((v,i)=>{
+      el(svg,'line',{x1:x(i),x2:x(i),y1:f.y(v.cumulative_ci95[0]),y2:f.y(v.cumulative_ci95[1]),stroke:colors[j],'stroke-width':1.4});
+      el(svg,'circle',{cx:x(i),cy:f.y(v.cumulative),r:3.2,fill:colors[j]});
+      if(i===2||i===3){el(svg,'text',{x:x(i)+(j?4:-4),y:Math.min(f.y(v.cumulative)+(j?-9:15),f.y(0)-8),'text-anchor':j?'start':'end',class:'value-label'},(v.cumulative*100).toFixed(1));}
+    });
+  });
+  for(let i=0;i<5;i++){const node=el(svg,'rect',{x:Math.max(f.m.l,x(i)-f.plotW/8),y:f.m.t,width:i===0||i===4?f.plotW/8:f.plotW/4,height:f.plotH,fill:'transparent'});targets.push([node,i]);}
+  hookTooltip(svg,targets,i=>`<b>截至第 ${i+1} 回合</b>`+data.map((r,j)=>{const v=r.rows[i];return `<p>${j?'后手':'先手'}：${pct(v.cumulative)} · ${number(v.cumulative_count)} 局</p><p>95% CI：${pct(v.cumulative_ci95[0])}–${pct(v.cumulative_ci95[1])}</p>`;}).join(''));
+  const bars=$('first-chart'),b=frame(bars),step=b.plotW/6,barW=Math.min(19,step*.25),hits=[];
+  el(bars,'title',{},'先后手首次启动分布，包括五费内未启动');
+  for(let i=0;i<6;i++){
+    const mid=b.m.l+(i+.5)*step;el(bars,'text',{x:mid,y:b.h-12,'text-anchor':'middle'},i<5?(i+1)+'费':'未启动');
+    data.forEach((r,j)=>{const v=i<5?r.rows[i].first:r.failed/r.n;el(bars,'rect',{x:mid+(j?2:-barW-2),y:b.y(v),width:barW,height:v*b.plotH,fill:colors[j],rx:1});});
+    hits.push([el(bars,'rect',{x:b.m.l+i*step,y:b.m.t,width:step,height:b.plotH,fill:'transparent'}),i]);
+  }
+  hookTooltip(bars,hits,i=>`<b>${i<5?'第 '+(i+1)+' 回合首次启动':'五费内未启动'}</b>`+data.map((r,j)=>`<p>${j?'后手':'先手'}：${pct(i<5?r.rows[i].first:r.failed/r.n)} · ${number(i<5?r.rows[i].first_count:r.failed)} 局</p>`).join(''));
+}
+function updateStats(){
+  const [a,b]=getStats();$('stats-label').textContent=PRESETS[preset].label;
+  $('stats-rows').innerHTML=[3,4,5].map(t=>{const x=a.rows[t-1],y=b.rows[t-1];return `<tr><td>${t}费</td><td>${pct(x.first)}</td><td class="emphasis">${pct(x.cumulative)}<small>${number(x.cumulative_count)}</small></td><td>${pct(y.first)}</td><td class="second">${pct(y.cumulative)}<small>${number(y.cumulative_count)}</small></td></tr>`;}).join('');
+  notes();charts();
+}
+$('seed-form').addEventListener('submit',e=>{e.preventDefault();generate();});
+$('random-seed').addEventListener('click',()=>{const n=new Uint32Array(1);crypto.getRandomValues(n);$('seed').value=n[0];generate();});
+$('preset').addEventListener('change',()=>{const prior=preset;preset=$('preset').value;if(!generate()){preset=prior;$('preset').value=prior;}});
+document.querySelectorAll('[data-side]').forEach(b=>b.addEventListener('click',()=>{const prior=side;side=b.dataset.side;if(!generate())side=prior;document.querySelectorAll('[data-side]').forEach(x=>x.setAttribute('aria-pressed',x.dataset.side===side?'true':'false'));}));
+$('prev').addEventListener('click',()=>{pause();move(index-1);});$('next').addEventListener('click',()=>{pause();move(index+1);});$('finish').addEventListener('click',()=>{pause();move(replay.events.length-1);});
+$('play').addEventListener('click',()=>{if(timer!==null){pause();return;}if(index===replay.events.length-1)move(0);$('play').textContent='暂停';$('play').setAttribute('aria-pressed','true');timer=setInterval(()=>move(index+1),1100);});
+$('scrubber').addEventListener('input',()=>{pause();move(+$('scrubber').value);});
+$('timeline').addEventListener('click',e=>{const b=e.target.closest('[data-step]');if(b){pause();move(+b.dataset.step);}});
+$('turn-jumps').addEventListener('click',e=>{const b=e.target.closest('[data-turn]');if(b){pause();move(replay.events.findIndex(e=>e.state.turn===+b.dataset.turn));}});
+document.addEventListener('keydown',e=>{if(['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName)||$('card-dialog').open)return;if(e.key==='ArrowRight'){e.preventDefault();pause();move(index+1);}if(e.key==='ArrowLeft'){e.preventDefault();pause();move(index-1);}});
+$('hand').addEventListener('click',e=>{const b=e.target.closest('[data-card]');if(!b)return;const c=replay.events[index].state.hand.find(c=>c.uid===+b.dataset.card);$('dialog-title').textContent=NzothEngine.cardName(c);$('dialog-cost').textContent='当前 '+c.cost+' 费 / 基础 '+NzothEngine.COST[c.kind]+' 费';$('dialog-text').textContent=c.uid===999?'在本回合中，获得一个法力水晶。':CARD_DATA[c.kind].text.replace(/<[^>]*>/g,'').replace(/\[x\]/g,'').replace(/\$/g,'');$('dialog-note').textContent=(c.shadow?'这张牌来自殒命暗影的复制。 ':'')+(c.delta?'永久费用变化：'+c.delta+'。 ':'')+'当前费用另计待发、骨刺与碎冰者的适用减费。';$('card-dialog').showModal();});
+$('dialog-close').addEventListener('click',()=>$('card-dialog').close());
+$('export-csv').addEventListener('click',()=>{
+  const data=getStats(),rows=[['实验','先后手','样本量','回合','首次启动局数','首次概率','累计启动局数','累计概率','累计95%CI下界','累计95%CI上界']];
+  data.forEach((r,j)=>r.rows.forEach(v=>rows.push([PRESETS[preset].label,j?'后手':'先手',r.n,v.turn,v.first_count,v.first,v.cumulative_count,v.cumulative,...v.cumulative_ci95])));
+  const blob=new Blob(['\ufeff'+rows.map(r=>r.join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='nzoth-'+preset+'-200000.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
+$('deck-full').innerHTML=NzothEngine.names.map((name,k)=>`<div><span>${NzothEngine.COST[k]}费 ${esc(name)}</span><span>×${NzothEngine.COPIES[k]}</span></div>`).join('');
+const observer=new ResizeObserver(()=>{if(replay)charts();});observer.observe($('cumulative-chart').parentElement);observer.observe($('first-chart').parentElement);
+window.NzothLab={generate,move,getState:()=>({seed:replay?.seed,side,preset,index,turn:replay?.turn,events:replay?.events.length,state:replay?.events[index].state})};
+generate();
+})();
+</script>
+</body>
+</html>
